@@ -1,0 +1,38 @@
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+    background-color: #FFFFFF;
+	text-align: center;
+	margin-left: 10%;
+	width: 400pt;
+}
+#index_header {
+	width: 400pt;
+	clear: both;
+	padding: 1%;
+	text-align:center;
+}
+#index_contents {
+	width: 400pt;
+	clear: both;
+	text-align:center;
+}
+#index_sideBar {
+	width: 25%;
+	height: 400px;
+	float: left;
+	background-color: #FFE4B5;
+	padding: 1%;
+	text-align: left;
+}
+#index_map {
+	width: 71%;
+	float: left;
+	padding: 1%;
+	text-align: center;
+}
+#index_footer {
+	width: 100%;
+	clear: both;
+	text-align: right;
+	font-size: x-small;
+}
