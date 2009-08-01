@@ -1,0 +1,21 @@
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+    background-color: #FDF5E6;
+	text-align: center;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+#tmp_login {
+	width: 100%;
+	clear: both;
+	text-align: right;
+	font-size: small;
+}
+#tmp_header {
+	width: 100%;
+}
+#linkList {
+	clear: both;
+	font-size: small;
+	text-align: left;
+}
