@@ -6,6 +6,7 @@
 	<head>
 	    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	    <link type="text/css" rel="stylesheet" href="/stylesheets/header.css" />
+    	<link rel="shortcut icon" href="../image/favicon.ico" >
 	</head>
 	<body>
 		<!-- ヘッダ -->
