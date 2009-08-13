@@ -12,14 +12,12 @@ import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class SpotDate {
-    @PrimaryKey
-    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-    private Long id;
     
     /**
      * スポットID
      */
-    @Persistent
+    @PrimaryKey
+    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
     private Integer spotID;
     
     /**
@@ -166,8 +164,4 @@ public class SpotDate {
 		this.addDate = addDate;
 	}
 
-	public Long getId() {
-		return id;
-	}
-    
 }
