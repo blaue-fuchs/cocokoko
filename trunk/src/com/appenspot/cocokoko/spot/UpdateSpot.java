@@ -20,13 +20,9 @@ public class UpdateSpot extends HttpServlet {
     private static final long serialVersionUID = 1L;
     
     public void doPost(HttpServletRequest req, HttpServletResponse resp)
-    throws IOException, NumberFormatException{
+    throws IOException{
     
         PersistenceManager pm = PMF.get().getPersistenceManager();
-        
-        /* スポットデータ取得 */
-        Integer spotID = Integer.valueOf(req.getParameter("spotID"));
-        SpotDate spotdata = pm.getObjectById(SpotDate.class,spotID);
         
         /* ユーザデータ取得 */
         UserService userService = UserServiceFactory.getUserService();
@@ -39,7 +35,11 @@ public class UpdateSpot extends HttpServlet {
             /* トランザクション開始 */
             tx.begin();
             
-            /* データ更新 */
+            /* スポットデータ取得 */
+            Integer spotID = Integer.valueOf(req.getParameter("spotID"));
+            SpotDate spotdata = pm.getObjectById(SpotDate.class,spotID);
+            
+            /* 値をセット */
             spotdata.setCategoryID(Integer.valueOf(req.getParameter("categoryID")));
             spotdata.setSpotNm(req.getParameter("spotNm"));
             spotdata.setLAT(Double.valueOf(req.getParameter("lat")));
@@ -52,6 +52,9 @@ public class UpdateSpot extends HttpServlet {
                 spotdata.setAddUserNm(null);
             }
             spotdata.setAddDate(new Date());
+            
+            /* データ更新 */
+            pm.makePersistent(spotdata);
             
             /* コミット */
             tx.commit();
