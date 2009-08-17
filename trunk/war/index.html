@@ -12,9 +12,34 @@
     <link rel="shortcut icon" href="../image/favicon.ico" >
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
     <title>CoCo! KoKo! - 普段は無くても良いけれど、ふとした時に知りたくなる場所　そんな場所を探せます！</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAA75pvos1A5mkhEVzv7aLzHRSh4Aqf95VtBgycL3FDgSU7LDmu1xQuU0vY8vugTCXF59KsPQsESFe_Mw" type="text/javascript"></script>
+    <script type="text/javascript">
+
+    function initialize() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map_canvas"));
+        
+        // クリック時、中心座標を表示（現在表示部コメントアウト）
+        GEvent.addListener(map, "click", function() {
+        	var center = map.getCenter();
+  			document.getElementById("message").innerHTML = center.toString();
+        });
+        
+        // MAP生成 //
+        map.setCenter(new GLatLng(34.68291096793206, 132.7587890625), 8);
+        // 地図/航空写真/地図＋写真　切り替えボタン：表示
+		map.addControl(new GMapTypeControl());
+		// ズームバー：表示
+		map.addControl(new GLargeMapControl());
+		// ホイールスクロールで拡大・縮小：可
+		map.enableScrollWheelZoom();
+      }
+    }
+    </script>
+    
   </head>
 
-  <body>
+  <body onload="initialize()" onunload="GUnload()">
   	<!-- ヘッダ部 -->
   	<div id="index_header">
   		<p>
@@ -48,7 +73,8 @@
 	    </div>
 	    <!-- マップ -->
 	    <div id="index_map">
-	    	<img src="" width="400" height="400" border="1" alt="map">
+	    	<div id="map_canvas" style="width: 400px; height: 300px"></div>
+	    	<!-- <div id="message"></div>  -->
 	    </div>
 	</div>
     <!-- フッター -->
