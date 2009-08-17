@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.appenspot.cocokoko.data.SpotDate;
+import com.appenspot.cocokoko.data.SpotData;
 import com.appenspot.cocokoko.data.PMF;
 
 import com.google.appengine.api.users.User;
@@ -37,7 +37,7 @@ public class UpdateSpot extends HttpServlet {
             
             /* スポットデータ取得 */
             Integer spotID = Integer.valueOf(req.getParameter("spotID"));
-            SpotDate spotdata = pm.getObjectById(SpotDate.class,spotID);
+            SpotData spotdata = pm.getObjectById(SpotData.class,spotID);
             
             /* 値をセット */
             spotdata.setCategoryID(Integer.valueOf(req.getParameter("categoryID")));
