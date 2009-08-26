@@ -1,6 +1,6 @@
 package com.appenspot.cocokoko.data;
 /**
- * ƒXƒ|ƒbƒgƒf[ƒ^
+ * ã‚¹ãƒãƒƒãƒˆãƒ‡ãƒ¼ã‚¿
  */
 import java.util.Date;
 
@@ -11,41 +11,41 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class SpotDate {
+public class SpotData {
     
     /**
-     * ƒXƒ|ƒbƒgID
+     * ã‚¹ãƒãƒƒãƒˆID
      */
     @PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
     private Integer spotID;
     
     /**
-     * ƒJƒeƒSƒŠID
+     * ã‚«ãƒ†ã‚´ãƒªID
      */
     @Persistent
     private Integer categoryID;
     
     /** 
-     * ƒXƒ|ƒbƒg–¼
+     * ã‚¹ãƒãƒƒãƒˆå
      */
     @Persistent
     private String spotNm;
     
     /**
-     * ˆÜ“x
+     * ç·¯åº¦
      */
     @Persistent
     private Double lat;
     
     /**
-     * Œo“x
+     * çµŒåº¦
      */
     @Persistent
     private Double lng;
     
     /**
-     * ”õl
+     * å‚™è€ƒ
      */
     @Persistent
     private String memo;
@@ -57,26 +57,26 @@ public class SpotDate {
     private String url;
     
     /**
-     * ì¬ƒ†[ƒU–¼
+     * ä½œæˆãƒ¦ãƒ¼ã‚¶å
      */
     @Persistent
     private String addUserNm;
     
     /**
-     * ì¬”NŒ“ú
+     * ä½œæˆå¹´æœˆæ—¥
      */
     @Persistent
     private Date addDate;
 
       
     /**
-     * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+     * ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
      */
-        public SpotDate() {
+        public SpotData() {
                 super();
         }
 
-        public SpotDate(Integer spotID, Integer categoryID, String spotNm,
+        public SpotData(Integer spotID, Integer categoryID, String spotNm,
                         Double lat, Double lng, String memo, String url, String addUserNm,
                         Date addDate) {
                 super();
