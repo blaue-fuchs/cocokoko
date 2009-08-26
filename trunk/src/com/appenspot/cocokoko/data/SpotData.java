@@ -76,11 +76,10 @@ public class SpotData {
                 super();
         }
 
-        public SpotData(Integer spotID, Integer categoryID, String spotNm,
+        public SpotData(Integer categoryID, String spotNm,
                         Double lat, Double lng, String memo, String url, String addUserNm,
                         Date addDate) {
                 super();
-                this.spotID = spotID;
                 this.categoryID = categoryID;
                 this.spotNm = spotNm;
                 this.lat = lat;
