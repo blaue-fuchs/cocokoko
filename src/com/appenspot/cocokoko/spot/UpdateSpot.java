@@ -40,7 +40,7 @@ public class UpdateSpot extends HttpServlet {
             SpotData spotdata = pm.getObjectById(SpotData.class,spotID);
             
             /* 値をセット */
-            spotdata.setCategoryID(Integer.valueOf(req.getParameter("categoryID")));
+            spotdata.setCategoryID(Long.valueOf(req.getParameter("categoryID")));
             spotdata.setSpotNm(req.getParameter("spotNm"));
             spotdata.setLAT(Double.valueOf(req.getParameter("lat")));
             spotdata.setLNG(Double.valueOf(req.getParameter("lng")));
