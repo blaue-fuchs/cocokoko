@@ -18,13 +18,13 @@ public class SpotData {
      */
     @PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-    private Integer spotID;
+    private Long spotID;
     
     /**
      * カテゴリID
      */
     @Persistent
-    private Integer categoryID;
+    private Long categoryID;
     
     /** 
      * スポット名
@@ -76,7 +76,7 @@ public class SpotData {
                 super();
         }
 
-        public SpotData(Integer categoryID, String spotNm,
+        public SpotData(Long categoryID, String spotNm,
                         Double lat, Double lng, String memo, String url, String addUserNm,
                         Date addDate) {
                 super();
@@ -91,19 +91,19 @@ public class SpotData {
         }
 
         
-        public Integer getSpotID() {
+        public Long getSpotID() {
                 return spotID;
         }
 
-        public void setSpotID(Integer spotID) {
+        public void setSpotID(Long spotID) {
                 this.spotID = spotID;
         }
 
-        public Integer getCategoryID() {
+        public Long getCategoryID() {
                 return categoryID;
         }
 
-        public void setCategoryID(Integer categoryID) {
+        public void setCategoryID(Long categoryID) {
                 this.categoryID = categoryID;
         }
 
