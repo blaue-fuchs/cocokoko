@@ -18,7 +18,7 @@ public class SpotData {
      */
     @PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-    private Long spotID;
+    private Integer spotID;
     
     /**
      * カテゴリID
@@ -72,95 +72,96 @@ public class SpotData {
     /**
      * コンストラクタ
      */
-        public SpotData() {
-                super();
-        }
+	public SpotData() {
+		super();
+	}
 
-        public SpotData(Long categoryID, String spotNm,
-                        Double lat, Double lng, String memo, String url, String addUserNm,
-                        Date addDate) {
-                super();
-                this.categoryID = categoryID;
-                this.spotNm = spotNm;
-                this.lat = lat;
-                this.lng = lng;
-                this.memo = memo;
-                this.url = url;
-                this.addUserNm = addUserNm;
-                this.addDate = addDate;
-        }
+	public SpotData(Integer spotID, Long categoryID, String spotNm,
+			Double lat, Double lng, String memo, String url, String addUserNm,
+			Date addDate) {
+		super();
+		this.spotID = spotID;
+		this.categoryID = categoryID;
+		this.spotNm = spotNm;
+		this.lat = lat;
+		this.lng = lng;
+		this.memo = memo;
+		this.url = url;
+		this.addUserNm = addUserNm;
+		this.addDate = addDate;
+	}
 
-        
-        public Long getSpotID() {
-                return spotID;
-        }
+	
+	public Integer getSpotID() {
+		return spotID;
+	}
 
-        public void setSpotID(Long spotID) {
-                this.spotID = spotID;
-        }
+	public void setSpotID(Integer spotID) {
+		this.spotID = spotID;
+	}
 
-        public Long getCategoryID() {
-                return categoryID;
-        }
+	public Long getCategoryID() {
+		return categoryID;
+	}
 
-        public void setCategoryID(Long categoryID) {
-                this.categoryID = categoryID;
-        }
+	public void setCategoryID(Long categoryID) {
+		this.categoryID = categoryID;
+	}
 
-        public String getSpotNm() {
-                return spotNm;
-        }
+	public String getSpotNm() {
+		return spotNm;
+	}
 
-        public void setSpotNm(String spotNm) {
-                this.spotNm = spotNm;
-        }
+	public void setSpotNm(String spotNm) {
+		this.spotNm = spotNm;
+	}
 
-        public Double getLAT() {
-                return lat;
-        }
+	public Double getLAT() {
+		return lat;
+	}
 
-        public void setLAT(Double lat) {
-                this.lat = lat;
-        }
+	public void setLAT(Double lat) {
+		this.lat = lat;
+	}
 
-        public Double getLNG() {
-                return lng;
-        }
+	public Double getLNG() {
+		return lng;
+	}
 
-        public void setLNG(Double lng) {
-                this.lng = lng;
-        }
+	public void setLNG(Double lng) {
+		this.lng = lng;
+	}
 
-        public String getMemo() {
-                return memo;
-        }
+	public String getMemo() {
+		return memo;
+	}
 
-        public void setMemo(String memo) {
-                this.memo = memo;
-        }
+	public void setMemo(String memo) {
+		this.memo = memo;
+	}
 
-        public String getUrl() {
-                return url;
-        }
+	public String getUrl() {
+		return url;
+	}
 
-        public void setUrl(String url) {
-                this.url = url;
-        }
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
-        public String getAddUserNm() {
-                return addUserNm;
-        }
+	public String getAddUserNm() {
+		return addUserNm;
+	}
 
-        public void setAddUserNm(String addUserNm) {
-                this.addUserNm = addUserNm;
-        }
+	public void setAddUserNm(String addUserNm) {
+		this.addUserNm = addUserNm;
+	}
 
-        public Date getAddDate() {
-                return addDate;
-        }
+	public Date getAddDate() {
+		return addDate;
+	}
 
-        public void setAddDate(Date addDate) {
-                this.addDate = addDate;
-        }
+	public void setAddDate(Date addDate) {
+		this.addDate = addDate;
+	}
 
 }
