@@ -22,7 +22,7 @@
         // クリック時、中心座標を表示（現在表示部コメントアウト）
         GEvent.addListener(map, "click", function() {
         	var center = map.getCenter();
-  			document.getElementById("message").innerHTML = center.toString();
+  			//document.getElementById("message").innerHTML = center.toString();
         });
         
         // MAP生成 //
@@ -33,6 +33,16 @@
 		map.addControl(new GLargeMapControl());
 		// ホイールスクロールで拡大・縮小：可
 		map.enableScrollWheelZoom();
+		
+		// ポインタ
+		var point = new GLatLng(34.68291096793206, 132.7587890625)
+		// マーカー
+		var marker = new GMarker(point);
+        GEvent.addListener(marker, "click", function() {
+        	var html = "<form><input type='submit' value='詳細'></form>";
+        	marker.openInfoWindowHtml(html);
+        });
+		map.addOverlay(marker);
       }
     }
     </script>
@@ -74,7 +84,7 @@
 	    <!-- マップ -->
 	    <div id="index_map">
 	    	<div id="map_canvas" style="width: 400px; height: 300px"></div>
-	    	<!-- <div id="message"></div>  -->
+	    	<div id="message"></div>
 	    </div>
 	</div>
     <!-- フッター -->
