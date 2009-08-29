@@ -12,6 +12,32 @@
 		<servlet-name>CoCoKoKo</servlet-name>
 		<url-pattern>/cocokoko</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InsertSpot</servlet-name>
+		<servlet-class>com.appenspot.cocokoko.spot.InsertSpot</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertSpot</servlet-name>
+		<url-pattern>/insspot</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UpdateSpot</servlet-name>
+		<servlet-class>com.appenspot.cocokoko.spot.UpdateSpot</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateSpot</servlet-name>
+		<url-pattern>/updspot</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DeleteSpot</servlet-name>
+		<servlet-class>com.appenspot.cocokoko.spot.DeleteSpot</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteSpot</servlet-name>
+		<url-pattern>/delspot</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
