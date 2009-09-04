@@ -46,11 +46,13 @@ public class UpdateSpot extends HttpServlet {
             spotdata.setLNG(Double.valueOf(req.getParameter("lng")));
             spotdata.setMemo(req.getParameter("memo"));
             spotdata.setUrl(req.getParameter("url"));
+            
             if (user != null) {
                 spotdata.setAddUserNm(user.getNickname());
             } else {
                 spotdata.setAddUserNm(null);
             }
+            
             spotdata.setAddDate(new Date());
             
             /* データ更新 */
