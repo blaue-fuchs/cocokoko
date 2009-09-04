@@ -18,7 +18,8 @@ public class SpotData {
      */
     @PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-    private Integer spotID;
+    //private Integer spotID;//自動生成はjava.lang.Long型みたい
+    private Long spotID;
     
     /**
      * カテゴリID
@@ -76,7 +77,7 @@ public class SpotData {
 		super();
 	}
 
-	public SpotData(Integer spotID, Long categoryID, String spotNm,
+	public SpotData(Long spotID, Long categoryID, String spotNm,
 			Double lat, Double lng, String memo, String url, String addUserNm,
 			Date addDate) {
 		super();
@@ -92,11 +93,11 @@ public class SpotData {
 	}
 
 	
-	public Integer getSpotID() {
+	public Long getSpotID() {
 		return spotID;
 	}
 
-	public void setSpotID(Integer spotID) {
+	public void setSpotID(Long spotID) {
 		this.spotID = spotID;
 	}
 
